@@ -1,0 +1,27 @@
+CREATE TABLE Book_Details  
+(  
+    ISBN_Codeint PRIMARY KEY,  
+    Book_Titlevarchar(100),  
+    Language varchar(10),  
+    Binding_Idint,  
+    No_Copies_Actualint,  
+    No_Copies_Currentint,  
+    Category_idint,  
+    Publication_yearint  
+)  
+CREATE TABLE users (
+  user_id INT,
+name string,
+address string,
+  book_id INT,
+  ts TIMESTAMP DEFAULT NOW()
+)
+CREATE TABLE book_copy
+(
+  id INT,
+book_id (FK to book),
+  user_id (FK to customer),
+  checked_out,
+due_date,
+)
+
